@@ -1,0 +1,73 @@
+/* CSS rules for Quizz template */
+.axel-core-editable {
+	border: none !important;
+}
+div.t_quizz_item_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  padding: 2px;
+  background: gray;
+}
+div.t_quizz_choice_menu:hover div.t_quizz_menu_content, div.t_quizz_menu_content:hover {
+  display: block;
+}
+div.t_quizz_choice_menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  font-size: 80%;
+}
+div.t_quizz_menu_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+div.t_quizz_menu_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em; /* same as .t_quizz_choice_menu  */
+  height: 2em;
+}
+p.t_answer {
+  position: relative;
+  margin-left: -5em !important;
+  padding-left: 5em;
+  -moz-transition: color 1s;
+}
+p.correct {
+  color: green;
+  -moz-transition: color 1s;
+}
+div.x-Item {
+  position: relative;
+  margin: 1em;
+  padding: 1em;
+  border: solid 1px gray;
+}
+li.t_quizz {
+  vertical-align: top
+}
+li.t_quizz > p {
+  margin: 0 0 0.25em 0;
+}
+p.x-Explain {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+ul.x-Choices {
+  list-style-type: decimal;
+  margin-left: 0;
+  padding-left: 5em;
+}
+div.x-Question > p {
+  margin-top: 20px;
+}
+/* touch (based on Modernizr) */
+.touch div.t_quizz_menu_content {
+  display: block;
+}

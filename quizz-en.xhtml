@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:xt="http://ns.inria.org/xtiger" xml:lang="en">
+<head>                  
+  <!-- Use UTF-8 and avoid the xml protocol declaration at the top for Internet Explorer -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="Quizz XTiger XML document template" />
+  <meta name="keywords" content="template, XTiger" />
+  <meta name="author" content="Stéphane Sire" />
+
+  <title>Quizz XTiger Template</title>
+
+  <!-- The CSS links below are used only if the template is opened / transformed inside an iframe
+       (set your own paths)
+       -->
+  <link rel="stylesheet" href="resources/template.css" type="text/css" charset="utf-8"/>
+  <!-- optionnal AXEL Preview Mode -->
+  <link rel="stylesheet" href="resources/preview.css" type="text/css" charset="utf-8"/>
+
+  <xt:head version="1.1" templateVersion="1.0" label="Quizz">
+
+    <xt:component name="t_item">  
+      <div class="x-Item">
+        <div class="t_quizz_item_menu"><xt:menu-marker/></div>
+        <xt:use types="t_question" label="Question"/>
+        <xt:use types="t_choices" label="Choices"/>
+      </div>
+    </xt:component> 
+    
+    <xt:component name="t_question">
+      <div class="x-Question">
+        <p><xt:use types="content" param="shape=parent;type=textarea">Click here to edit the question</xt:use></p>
+      </div>
+    </xt:component>
+
+    <xt:component name="t_choices">
+      <ul class="x-Choices">
+        <xt:repeat minOccurs="1" maxOccurs="*" pseudoLabel="Choice">
+          <li class="t_quizz">
+            <xt:use types="t_choice" label="Choice"/>
+          </li>
+        </xt:repeat>
+      </ul>
+    </xt:component>
+
+    <xt:component name="t_choice">
+      <p class="t_answer">
+        <div class="t_quizz_choice_menu">
+          <div class="t_quizz_menu_mask">
+            <div class="t_quizz_menu_content">        
+              <xt:attribute name="State" types="select" values="correct incorrect" i18n="Right Wrong" default="Wrong" param="filter=style;style_property=class;style_root_class=t_answer"/>
+            </div>
+          </div>
+        </div>
+        <xt:use types="content" param="shape=parent-150px;type=textarea" label="Answer">Click here to edit an answer</xt:use><xt:menu-marker/>
+      </p>
+      <p class="x-Explain">
+        <xt:use types="content" label="Explain" param="shape=parent-50px;type=textarea" option="unset">Click here to edit an explanation</xt:use>
+      </p>
+    </xt:component>
+  
+  </xt:head>
+</head>
+<body>
+  <h3><xt:use types="content" label="Title">Click to edit the title of the Quizz</xt:use></h3>
+  <p><xt:use types="content" param="type=textarea;shape=parent" label="Comment">Click to edit a comment about the Quizz</xt:use></p>
+  <xt:repeat minOccurs="1" maxOccurs="*" pseudoLabel="Item">
+    <xt:use types="t_item" label="Item" />
+  </xt:repeat>
+</body>
+</html>

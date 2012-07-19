@@ -1,0 +1,110 @@
+/* reset */
+p { 
+  margin: 0;
+}
+/* model presentation */
+h1 {
+  font-size: 140%;
+}
+p.x-Comment {
+  margin: 1em 0 2em;
+  font-style: italic;
+}
+div.x-Question {
+  font-size: 120%;
+  width: 90%;
+  margin: 1em auto;
+}
+ul.x-Choices {
+  width: 80%;
+  margin: 1em auto;
+  list-style-type: none;
+  list-style-position: outside;
+}
+p.x-Explain {
+  font-style: italic;
+  margin-left: 30px;
+  display: none;
+}
+p.x-Answer {
+  position: relative;
+  margin-left: 30px;
+}
+ul.x-Choices input {
+  position: absolute;
+  left: -30px;
+}
+/* UI */
+div#ui-next {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  z-index: 10;
+}
+div#ui-prev {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  z-index: 10;
+  display: none;
+}
+p.v-results {
+  font-size: 120%;
+  margin: 2em 0 1em 0;
+}
+#good, #total {
+  font-weight: bold;
+  color: blue;
+}
+/* animation */
+div.x-Item.cur {
+  display: block;
+  -ms-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+div.x-Item.done {
+  -ms-transform: translateX(-500px);
+  -moz-transform: translateX(-500px);
+  -o-transform: translateX(-500px);
+  -webkit-transform: translate3d(-500px, 0, 0);
+}
+div.x-Item {
+  position: absolute;
+  padding: 1em;
+  top: 0;
+  width: 500px;
+  height: 300px;
+  -ms-transform: translateX(500px);
+  -ms-transition: -ms-transform 1.5s ease-in-out;
+  -moz-transform: translateX(500px);
+  -moz-transition: -moz-transform 1.5s ease-in-out;
+  -o-transform: translateX(500px);
+  -o-transition: -o-transform 1.5s ease-in-out;
+  -webkit-transform: translate3d(500px, 0px, 0px);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out;
+}
+body {
+  /* hide scrollbars on webkit */
+  overflow: hidden;
+}
+
+/* correction mode */
+body.correction li.checked.x-Incorrect label {
+  color: red;
+  font-weight: bold;
+}
+body.correction li.unchecked.x-Correct label, body.correction li.checked.x-Correct label {
+  color: green;
+  font-weight: bold;
+}
+body.correction li.x-Correct p.x-Explain, body.correction li.checked.x-Incorrect p.x-Explain  {
+  display: block;
+}
+body.correction li.x-Correct p.x-Explain {
+  color: green;
+}
+body.correction li.x-Incorrect p.x-Explain {
+   color: red;
+}

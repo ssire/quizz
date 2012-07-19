@@ -1,0 +1,106 @@
+<Quizz>
+    <Title>Continent</Title>
+    <Comment>Inspired from http://www.kinglishschool.com/quiz/continent.htm</Comment>
+    <Item>
+        <Question>What is the biggest continent of the world?</Question>
+        <Choices>
+            <Choice State="correct">
+                <Answer>Asia</Answer>
+                <Explain>Asia is is the biggest continent of the world at 44 millions sq km</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>North America </Answer>
+                <Explain>North America is 24 millions sq km</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>Antarctic</Answer>
+                <Explain>Antartic is only 13 millions sq km</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+    <Item>
+        <Question>What is the smallest continent of the world?</Question>
+        <Choices>
+            <Choice State="incorrect">
+                <Answer>Antarctic</Answer>
+                <Explain>Antartic is 13 millions sq km</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>Europe</Answer>
+              <Explain>Europe is 10 millions sq km</Explain>
+            </Choice>
+            <Choice State="correct">
+                <Answer>Australia</Answer>
+              <Explain>Australia is the smallest continent of the world at 7,6 millions sq km</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+    <Item>
+        <Question>Which continent has the highest number of countries?</Question>
+        <Choices>
+            <Choice State="incorrect">
+                <Answer>Europe</Answer>
+                <Explain>Europe has 47 countries</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>Asia</Answer>
+                <Explain>Asia has 44 countries</Explain>
+            </Choice>
+            <Choice State="correct">
+                <Answer>Africa</Answer>
+                <Explain>Africa has the most countries with 53</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+    <Item>
+        <Question>Which continent has the lowest number of countries?</Question>
+        <Choices>
+            <Choice State="incorrect">
+                <Answer>Australia</Answer>
+                <Explain>Australia is a country and a continent</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>North America</Answer>
+                <Explain>North America has 23 countries</Explain>
+            </Choice>
+            <Choice State="correct">
+                <Answer>South America</Answer>
+                <Explain>South America has the lowest number of countries with 12</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+    <Item>
+        <Question>Which continent has the highest population?</Question>
+        <Choices>
+            <Choice State="incorrect">
+                <Answer>Africa</Answer>
+              <Explain>Africa has a population of 877 millions (2007)</Explain>
+            </Choice>
+            <Choice State="correct">
+                <Answer>Asia</Answer>
+                <Explain>Asia has the highest population of 3,987 millions (2007)</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>North America</Answer>
+              <Explain>North America has a population of 501 millions (2007)</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+    <Item>
+        <Question>Which continent has the lowest population?</Question>
+        <Choices>
+            <Choice State="correct">
+                <Answer>Antarctic</Answer>
+                <Explain>Antartica has the lowest population since it is not occupied</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>Australia</Answer>
+              <Explain>Australia has a population of 32 millions (2007)</Explain>
+            </Choice>
+            <Choice State="incorrect">
+                <Answer>South America</Answer>
+                <Explain>South America has a population of 380 millions (2007)</Explain>
+            </Choice>
+        </Choices>
+    </Item>
+</Quizz>
