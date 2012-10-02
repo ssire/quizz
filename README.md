@@ -9,7 +9,11 @@ The module shows how to build a simple custom document editor with the [AXEL](ht
 
 The module comes with a sample `continent.xml` XML Quizz document. The file `generator.xsl` is an XSLT transformation that generates a quizz gadget. For instance you can use the Saxon XSLT engine at [http://sourceforge.net/projects/saxon/](http://sourceforge.net/projects/saxon/) :
 
-    java -cp saxon9.jar net.sf.saxon.Transform  -xsl:generator.xsl -o continent.html continent.xml
+    java -cp saxon9.jar net.sf.saxon.Transform  -xsl:generator.xsl -o:continent.html continent.xml
+    
+You can also change some XSLT tranformation parameter directly from the command line :
+
+    java -cp saxon9.jar net.sf.saxon.Transform  -xsl:generator.xsl -o:continent.html continent.xml  xslt.base-url=some/other/path
 
 Then open the resulting file `continent.html` inside your browser to run the quizz.
 

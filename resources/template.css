@@ -2,13 +2,26 @@
 .axel-core-editable {
 	border: none !important;
 }
-div.t_quizz_item_menu {
+p.t_lang {
+  font-size: 90%;
+  margin-bottom: 0.5em;
+}
+p.t_lang + h3 {
+  margin-top: 0em;
+}
+div.t_quizz_item_repetition {
   position: absolute;
   top: 0;
   left: 0;
   width: 65px;
   padding: 2px;
   background: gray;
+}
+div.t_quizz_item_selection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 20px 0 0;
 }
 div.t_quizz_choice_menu:hover div.t_quizz_menu_content, div.t_quizz_menu_content:hover {
   display: block;
@@ -63,6 +76,11 @@ ul.x-Choices {
   list-style-type: decimal;
   margin-left: 0;
   padding-left: 5em;
+}
+ul.x-ChoicesTF {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 3.5em;
 }
 div.x-Question > p {
   margin-top: 20px;

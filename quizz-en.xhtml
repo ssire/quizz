@@ -23,11 +23,12 @@
 
     <xt:component name="t_item">  
       <div class="x-Item">
-        <div class="t_quizz_item_menu"><xt:menu-marker/></div>
+        <div class="t_quizz_item_repetition"><xt:menu-marker/></div>
+        <div class="t_quizz_item_selection"><xt:menu-marker target="t_item_selection"/></div>
         <xt:use types="t_question" label="Question"/>
-        <xt:use types="t_choices" label="Choices"/>
+        <xt:use types="t_choices_tf t_choices" label="ChoicesTF Choices" param="name=t_item_selection"/>
       </div>
-    </xt:component> 
+    </xt:component>
     
     <xt:component name="t_question">
       <div class="x-Question">
@@ -35,7 +36,7 @@
       </div>
     </xt:component>
 
-    <xt:component name="t_choices">
+    <xt:component name="t_choices" i18n="MCQ">
       <ul class="x-Choices">
         <xt:repeat minOccurs="1" maxOccurs="*" pseudoLabel="Choice">
           <li class="t_quizz">
@@ -60,14 +61,22 @@
         <xt:use types="content" label="Explain" param="shape=parent-50px;type=textarea" option="unset">Click here to edit an explanation</xt:use>
       </p>
     </xt:component>
+
+    <xt:component name="t_choices_tf" i18n="True/False">
+      <ul class="x-ChoicesTF">
+        <li class="t_quizz"><label><xt:attribute types='input' name='Answer' param='type=radio;name=answer;value=true;checked=true'/> True</label></li>
+        <li class="t_quizz"><label><xt:attribute types='input' name='Answer' param='type=radio;name=answer;value=false;'/> False</label></li>
+      </ul>
+    </xt:component>
   
   </xt:head>
 </head>
 <body>
+  <p class="t_lang">Playback language : <xt:attribute types="select" name="Lang" values="FR EN" default="EN"/></p>
   <h3><xt:use types="content" label="Title">Click to edit the title of the Quizz</xt:use></h3>
   <p><xt:use types="content" param="type=textarea;shape=parent" label="Comment">Click to edit a comment about the Quizz</xt:use></p>
   <xt:repeat minOccurs="1" maxOccurs="*" pseudoLabel="Item">
-    <xt:use types="t_item" label="Item" />
+    <xt:use types="t_item" label="Item"/>
   </xt:repeat>
 </body>
 </html>
