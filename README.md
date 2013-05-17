@@ -19,11 +19,17 @@ Then open the resulting file `continent.html` inside your browser to run the qui
 
 ## How to edit / create a Quizz document ?
 
-To edit a Quizz document you need first to checkout the AXEL (Adaptable XML Editing Library) at [https://github.com/ssire/axel](https://github.com/ssire/axel). Eventually follow the instructions to build a fresh `axel.js` library with the latest version of the source files.
+To edit a Quizz document you need first to checkout the AXEL-FORMS and the AXEL (Adaptable XML Editing Library) libraries at [https://github.com/ssire/axel-forms](https://github.com/ssire/axel-forms) and [https://github.com/ssire/axel](https://github.com/ssire/axel). Eventually follow the instructions to build a fresh `axel-forms.js` and `axel.js` library with the latest version of the source files, otherwise they come with pre-built ones that may not correspond to the latest commit but that should be sufficient.
 
-Then open `editor/editor.html` inside your browser (Firefox recommended if you run it directly from your file system). This is a sample application built with AXEL. You can use it to transform XTiger XML template documents into editors.
+Then open `editor/editor.html` from the AXEL-FORMS distribution inside your browser (Firefox recommended if you run it directly from your file system). This is a sample application built with AXEL-FORMS and AXEL. You can use it to transform XTiger XML template documents into editors.
 
-For that purpose "Browse" and select the XTiger template `quizz-en.xhtml`, then "Visualize" it (these commands refer to the corresponding buttons of the application user interface). You can then "Load" and "Save" some XML documents to and from the editor. Note that due to current limitation it is advised to "Visualize" again the template each time you want to reload some new data.
+It is important to checkout the 3 projects inside the same parent folder, so you should have them side-by-side:
+
+    axel/
+    axel-forms/
+    quizz/
+
+To load the XTiger template `quizz-en.xhtml` into the editor enter its URL into the `Template file` field, then hit "Transform" (these commands refer to the corresponding buttons of the application user interface). To get the XML document corresponding to the current Quizz document hit the "Dump" button, then you can cut-and-past the result into a file. You can load an Quizz document into the editor using the "Load" button. Note that due to current limitation it is advised to "Visualize" again the template each time you want to reload some new data.
 
 ## How to integrate this module on a server ?
 
