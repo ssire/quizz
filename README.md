@@ -29,7 +29,9 @@ It is important to checkout the 3 projects inside the same parent folder, so you
     axel-forms/
     quizz/
 
-To load the XTiger template `quizz-en.xhtml` into the editor enter its URL into the `Template file` field, then hit "Transform" (these commands refer to the corresponding buttons of the application user interface). To get the XML document corresponding to the current Quizz document hit the "Dump" button, then you can cut-and-past the result into a file. You can load an Quizz document into the editor using the "Load" button. Note that due to current limitation it is advised to "Visualize" again the template each time you want to reload some new data.
+To load the XTiger template `quizz-en.xhtml` into the editor enter its local path (absolute or relative) into the `Template file` field (e.g. `../../quizz/quizz-en.xhtml`), then hit "Transform" (these commands refer to the corresponding buttons of the application user interface). To get the XML document corresponding to the current Quizz document hit the "Dump" button, then you can cut-and-past the result into a file. You can load a Quizz document into the editor using the "Input" button or the "Load" (available on HTML5 File API capable browsers). For instance you can load the `continent.xml` Quizz document. Note that due to current limitation it is advised to "Transform" again the template each time you want to reload some new data.
+
+<img src="images/editor.png" alt="Quizz template loaded into the editor ready to edit a Quizz"/>
 
 ## How to integrate this module on a server ?
 
